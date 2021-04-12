@@ -34,7 +34,7 @@ border-top:3px double #f1f1f1; border-bottom:3px double #f1f1f1; padding-top:20p
 <!-- Complete javascript for login. -->
 <!-- Add url of javascript -->
 <script type="text/javascript" src="jquery-1.6.min.js"></script>
-<!-- Java Script -->
+<!-- Java Script 
 <script>
 
 	function login()
@@ -70,7 +70,43 @@ border-top:3px double #f1f1f1; border-bottom:3px double #f1f1f1; padding-top:20p
 		document.getElementById("pwd1").value="";
 	}
         </script>
-<!-- Javascript ending here.. -->        
+ Javascript ending here.. -->        
+	<!-- DEMO -->      
+	<script>
+
+	function login()
+	{
+		var uname = document.getElementById("email").value;
+		var pwd = document.getElementById("pwd1").value;
+		var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+		if(uname =='')
+		{
+			alert("아이디를 입력해주세요");
+		}
+		else if(pwd =='')
+		{
+        	alert("패스워드를 입력해주세요");
+		}
+		else if(uname == "user" && pwd == "123456789")
+		{
+       window.location = "https://gmidbroadcast.o-r.kr/user";
+		}
+		else if(uname == "admin" && pwd == "123456789")
+		{
+       window.location = "https://gmidbroadcast.o-r.kr/user/admin.html";
+		}
+		else
+		{
+			alert("유효하지 않은 사용자입니다");
+       window.location = "https://gmidbroadcast.o-r.kr/banned.html";
+			}
+	}				    
+	function clearFunc()
+	{
+		document.getElementById("email").value="";
+		document.getElementById("pwd1").value="";
+	}
+        </script>
 </head>
 
 <body>
